@@ -1,0 +1,39 @@
+
+<body>
+
+
+{% extends "gameTemplate.html" %}
+
+{% block content %}
+
+
+<div class="container">
+                <div id="game" class="content">
+			<b size="18" id="welcome">Leaderboard</b>
+                        <br>
+			<br>
+                </div>
+
+
+<table>
+
+	<th>Name</th>
+	<th>Score</th>
+
+{%for row in rows%}
+
+  <tr class="row">
+	  <td>{{row['username']}}</td>
+	  <td>{{row['score']}}</td>
+  </tr>
+
+{%endfor%}
+</table>
+
+
+</div>
+
+
+{% endblock content %}
+
+</body>

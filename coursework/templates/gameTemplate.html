@@ -1,0 +1,53 @@
+<body>
+
+
+
+{% extends "baseTemplate.html" %}
+
+{% block content %}
+
+
+	<div class="container">
+		<div id="game" class="content">
+			<b size="18" id="welcome">Welcome to Word Scramble</b>
+			<br>
+			<br>
+			<div id="timer"></div>
+			<br>
+			<b><div id="scramWord">Press continue to start</div></b>
+			<br>
+			<div id="scoreText"></div>
+		</div>
+		<div id="buttons" class="buttons" hidden=false>
+			<br>
+			<br>
+			<br>
+			
+				Enter word: <input id="enter" type="text" autofocus="autofocus" onFocus="this.select()" name="inputWord">
+		</div>
+		<button id="continue" type="submit" onClick="sendWord()" class="btn" >Continue</button>
+		
+
+		<div id="entry" hidden=true>To be added to the leader board, enter your name: 
+		<form action="" name="form" method="post">
+	
+			<input id="username" type="username" autofocus="autofocus"  name="username">
+			<input id="score" type="score" autofocus="autofocus" hidden=true name="score">
+
+		
+		<button hidden=true id="enterUser" type="submit" class="btn" >Submit</button>	
+
+
+		</form>
+		</div>
+
+
+<script src="{{url_for('static', filename='gameScript.js')}}"></script>
+
+{% endblock content %}
+
+
+
+		
+</body>
+

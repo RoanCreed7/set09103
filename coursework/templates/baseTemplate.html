@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<head>
+        <link href="../static/styles/mainStylesheet.css" rel="stylesheet">
+
+        <title>W0rd Scr4mb1e</title>
+
+</head>
+
+
+
+
+        <div class="menu">
+                <div class="burger"></div>
+        </div>
+
+        <div class="select">
+                <div class="menuSelect">
+                        <ul>
+                                <b>
+                                <li><a href="{{url_for('renderGamePage')}}">Home</a></li>
+                                <li><a href="{{url_for('showUserInfo')}}">Leaderboard</a></li>
+                                <li><a href="{{url_for('showInstructions')}}">Instructions</a></li>
+                                </b>
+                        </ul>
+                </div>
+        </div>
+
+<body>
+
+	{% block content %}
+
+
+	{% endblock content %}
+
+
+
+</body>
